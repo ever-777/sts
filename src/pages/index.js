@@ -10,7 +10,7 @@ import ModalForDoorsButton from "../components/modalForDoorsButton";
 const IndexPage = ({data}) => (
     <Layout activeItem="Металлические">
         <SEO title="Двери металлические"/>
-        <h1>Двери</h1>
+        <h1>Двери металлические</h1>
         <div className={"d-flex flex-wrap"}>
             {data.allMarkdownRemark.edges.map(({node}) => (
                 <div key={node.id} className={"card w-50"}>

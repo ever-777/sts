@@ -10,7 +10,9 @@ export default () => (
         <h1>Типы коробок</h1>
         <h2>1. Дверная коробка открытого типа, выполненная из цельногнутого профиля.
         </h2>
+        <div className={"d-flex justify-content-center"}>
         <Image src={"/images/doors/korobka1.jpg"}/>
+        </div>
         <p>
         Наличник г-образный с загибом 90°<br/>
         Цельногнутое полотно, внутри панель вдвижная.<br/>
@@ -18,7 +20,9 @@ export default () => (
         </p>
         <h2>2. Дверная коробка закрытого типа с заглушением снаружи.
         </h2>
+        <div className={"d-flex justify-content-center"}>
         <Image src={"/images/doors/korobka2.jpg"}/>
+        </div>
         <p>
         Наличник шириной 70 мм.<br/>
         Толщина короба — 94,97 или 108 мм.<br/>
