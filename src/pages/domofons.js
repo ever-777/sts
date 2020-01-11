@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default () => (
-    <Layout>
-        <SEO title="Домофоны"/>
+  <Layout activeItem="Домофонное обрудование">
+        <SEO title="Домофонное обрудование"/>
         <h1>Домофоны</h1>
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
             <ol className="carousel-indicators">

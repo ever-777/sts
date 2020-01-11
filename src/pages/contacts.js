@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 const ContactsPage = () => (
-    <Layout>
+  <Layout activeItem="Контакты">
         <SEO title="Контакты"/>
         <h1>Контакты</h1>
         <p><span className={"font-weight-bold"}>ООО "Универсал"</span></p>

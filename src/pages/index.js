@@ -8,8 +8,8 @@ import ModalForDoors from "../components/modalForDoors";
 import ModalForDoorsButton from "../components/modalForDoorsButton";
 
 const IndexPage = ({data}) => (
-    <Layout>
-        <SEO title="Двери"/>
+    <Layout activeItem="Металлические">
+        <SEO title="Двери металлические"/>
         <h1>Двери</h1>
         <div className={"d-flex flex-wrap"}>
             {data.allMarkdownRemark.edges.map(({node}) => (

@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 
 export default () => (
-    <Layout>
+  <Layout activeItem="Безопасность">
         <SEO title="Безопасность"/>
         <h1>Безопасность</h1>
         <div className={"card-group"}>

@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default () => (
-    <Layout>
+  <Layout activeItem="Ворота и шлагбаумы">
         <SEO title="Ворота и шлагбаумы"/>
         <h1>Ворота и шлагбаумы</h1>
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-pause="false"

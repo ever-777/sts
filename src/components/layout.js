@@ -16,7 +16,7 @@ import "./layout.css"
 import Menu from "./menu";
 
 
-const Layout = ({ children }) => {
+const Layout = ({ children, activeItem }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -42,7 +42,7 @@ const Layout = ({ children }) => {
             <div  className={"container"}>
                 <div className={"row"}>
                 <div className={"col-sm-3"}>
-                    <Catalog/>
+                    <Catalog activeItem={activeItem}/>
                 </div>
                 <div className={"col"}>
                     <Menu/>

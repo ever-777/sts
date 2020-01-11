@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 export default () => (
-    <Layout>
+  <Layout activeItem="Металлоконструкции">
         <SEO title="Металлоконструкции"/>
         <h1>Металлоконструкции</h1>
         <div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel" data-pause="false" data-interval="3000">
@@ -44,7 +44,7 @@ export default () => (
                     <img src="/images/mconstructions/mconstruction7.jpg" className="d-block w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
-                    <img src="/images/mconstructions/mconstruction8.jpg" className="d-block w-100" alt="..."/>
+                    <img src="/images/mconstructions/mconstruction8.png" className="d-block w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
                     <img src="/images/mconstructions/mconstruction9.jpg" className="d-block w-100" alt="..."/>
