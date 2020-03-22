@@ -36,22 +36,23 @@ export default IndexPage
 
 export const query = graphql`
 {
-    allMarkdownRemark {
+  allMarkdownRemark(sort: {fields: frontmatter___title}) {
     totalCount
     edges {
-    node {
-    id
-    frontmatter {
-    title
-    price
-    picture
-}
-    fields{
-    slug
-}
-    excerpt
-}
-}
-}
+      node {
+        id
+        frontmatter {
+          title
+          price
+          picture
+        }
+        excerpt
+        excerptAst
+        fields {
+          slug
+        }
+      }
+    }
+  }
 }
 `
