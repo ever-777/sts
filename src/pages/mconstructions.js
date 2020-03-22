@@ -19,7 +19,6 @@ export default () => (
                 <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
                 <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
             </ol>
             <div className="carousel-inner">
                 <div className="carousel-item active">
@@ -42,9 +41,6 @@ export default () => (
                 </div>
                 <div className="carousel-item">
                     <img src="/images/mconstructions/mconstruction7.jpg" className="d-block w-100" alt="..."/>
-                </div>
-                <div className="carousel-item">
-                    <img src="/images/mconstructions/mconstruction8.png" className="d-block w-100" alt="..."/>
                 </div>
                 <div className="carousel-item">
                     <img src="/images/mconstructions/mconstruction9.jpg" className="d-block w-100" alt="..."/>
