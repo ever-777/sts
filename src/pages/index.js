@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import {Image} from "react-bootstrap";
 import ModalForDoors from "../components/modalForDoors";
 import ModalForDoorsButton from "../components/modalForDoorsButton";
+import InfoNotification from "../components/infoNotification";
 
 const IndexPage = ({data}) => (
     <Layout activeItem="Металлические">
@@ -26,8 +27,10 @@ const IndexPage = ({data}) => (
                     </div>
                 </div>
             ))}
+
         </div>
         <ModalForDoors/>
+        <InfoNotification/>
     </Layout>
 )
 
