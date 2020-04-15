@@ -12,7 +12,7 @@ const menu = ({activePage}) => (
         // }}
         className={"nav justify-content-end"}
     >
-        <Link className={"nav-link disabled"}
+        <Link className={"nav-link"}
               to="/about/">О компании</Link>
         <Link  className={"nav-link disabled"}
               to="/">Наши партнеры</Link>

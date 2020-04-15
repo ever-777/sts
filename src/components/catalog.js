@@ -9,8 +9,8 @@ const Catalog = ({activeItem}) => (
         </div>
         <ul className="nav nav-pills flex-column" id={"accordion"}>
             <li className="nav-item">
-                {/*<a className={activeItem==="Двери" ? "nav-link active" : "nav-link"} href="/"  data-toggle={"collapse"} data-target={"#collapseOne"} aria-expanded={"true"} aria-controls={"collapseOne"}>Двери</a>*/}
-                <div className="nav-link" data-toggle={"collapse"} data-target={"#collapseOne"} aria-expanded={"true"} aria-controls={"collapseOne"}>Двери</div>
+                <Link className="nav-link" to="/"  data-toggle={"collapse"} data-target={"#collapseOne"} aria-expanded={"true"} aria-controls={"collapseOne"}>Двери</Link>
+                {/*<div className="nav-link" data-toggle={"collapse"} data-target={"#collapseOne"} aria-expanded={"true"} aria-controls={"collapseOne"}>Двери</div>*/}
                 <ul className={activeItem==="Металлические" || activeItem==="Коробки" ? "nav flex-column collapse show" : "nav flex-column collapse"} id={"collapseOne"} data-parent={"#accordion"}>
                     <li className="nav-item">
                         <a className={activeItem==="Металлические" ? "nav-link active" : "nav-link"} href="/">Металлические</a>
@@ -24,8 +24,8 @@ const Catalog = ({activeItem}) => (
                 </ul>
             </li>
             <li className="nav-item">
-                {/*<Link className="nav-link" to={"/security/"}  data-toggle={"collapse"} data-target={"#collapseTwo"} aria-expanded={"true"} aria-controls={"collapseTwo"}>Безопасность</Link>*/}
-                <div className="nav-link" data-toggle={"collapse"} data-target={"#collapseTwo"} aria-expanded={"true"} aria-controls={"collapseTwo"}>Безопасность</div>
+                <Link className="nav-link" to={"/domofons/"}  data-toggle={"collapse"} data-target={"#collapseTwo"} aria-expanded={"true"} aria-controls={"collapseTwo"}>Безопасность</Link>
+                {/*<div className="nav-link" data-toggle={"collapse"} data-target={"#collapseTwo"} aria-expanded={"true"} aria-controls={"collapseTwo"}>Безопасность</div>*/}
                 <ul className={activeItem==="Домофонное обрудование" || activeItem==="Видеонаблюдение" || activeItem==="Ворота и шлагбаумы" ? "nav flex-column collapse show" : "nav flex-column collapse"}  id={"collapseTwo"} data-parent={"#accordion"}>
                     <li className="nav-item">
                         <Link className={activeItem==="Домофонное обрудование" ? "nav-link active" : "nav-link"} to={"/domofons/"}>Домофонное обрудование</Link>

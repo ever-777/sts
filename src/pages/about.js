@@ -1,21 +1,26 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Header</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+const AboutPage = () => (
+  <Layout activeItem="О компании">
+        <SEO title="О компании"/>
+        <h1>Группа Компаний Спец Торг Сервис</h1>
+        <p>Основана в Самаре в 2009 году.</p>
+        <p>С момента основания Спец Торг Сервис достиг уровня современного предприятия с высокой производственной мощностью. Накопленный за это время опыт позволил нам достичь отличных показателей качества на уровне современных стандартов.</p>
+        <p>В данный момент времени мы заняли лидирующие позиции в 5 направлениях:
+        <ul>
+          <li>Производство металлических дверей</li>
+          <li>Производстве металлоконструкций</li>
+          <li>Строительство и отделочные работы</li>
+          <li>В сфере безопасности (домофоны и видео наблюдение)</li>
+          <li>В сфере логистики</li>
+        </ul>
+</p>
+<p>Следуя за тенденциями развития рынка, мы постоянно ищем новые подходы к решению различных задач. Что позволяет нам оставаться динамично развивающейся компанией с высокими стандартами качества.</p>
+
+    </Layout>
 )
 
-export default IndexPage
+export default AboutPage
