@@ -11,12 +11,12 @@ const Catalog = ({activeItem}) => (
             <li className="nav-item">
                 <Link className="nav-link" to="/"  data-toggle={"collapse"} data-target={"#collapseOne"} aria-expanded={"true"} aria-controls={"collapseOne"}>Двери</Link>
                 {/*<div className="nav-link" data-toggle={"collapse"} data-target={"#collapseOne"} aria-expanded={"true"} aria-controls={"collapseOne"}>Двери</div>*/}
-                <ul className={activeItem==="Фурнитура" || activeItem==="Металлические" || activeItem==="Коробки" ? "nav flex-column collapse show" : "nav flex-column collapse"} id={"collapseOne"} data-parent={"#accordion"}>
+                <ul className={activeItem==="Деревянные" || activeItem==="Фурнитура" || activeItem==="Металлические" || activeItem==="Коробки" ? "nav flex-column collapse show" : "nav flex-column collapse"} id={"collapseOne"} data-parent={"#accordion"}>
                     <li className="nav-item">
                         <a className={activeItem==="Металлические" ? "nav-link active" : "nav-link"} href="/">Металлические</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link disabled" href="/">Деревянные</a>
+                        <a className={activeItem==="Деревянные" ? "nav-link active" : "nav-link"} href="/wooddoors/">Деревянные</a>
                     </li>
                     <li className="nav-item">
                         <a className={activeItem==="Фурнитура" ? "nav-link active" : "nav-link"} href="/furnitura/">Фурнитура</a>
