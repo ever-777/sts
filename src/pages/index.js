@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
+import {graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -39,7 +40,7 @@ export default IndexPage
 
 export const query = graphql`
 {
-  allMarkdownRemark(sort: {fields: frontmatter___title}) {
+  allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fields: {}, frontmatter: {type: {eq: "metal"}}}) {
     totalCount
     edges {
       node {
@@ -47,6 +48,8 @@ export const query = graphql`
         frontmatter {
           title
           price
+          price_door
+          price_complect
           picture
         }
         excerpt

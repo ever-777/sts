@@ -24,18 +24,18 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const result = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
+      {
+        allMarkdownRemark(filter: {frontmatter: {type: {eq: "metal"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
             }
           }
         }
       }
-    }
-  `)
+        `)
 
     result.data.allMarkdownRemark.edges.forEach(({ node }) => {
         createPage({
@@ -48,4 +48,32 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+
+    const result2 = await graphql(`
+      {
+        allMarkdownRemark(filter: {frontmatter: {type: {eq: "wood"}}}) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+            }
+          }
+        }
+      }
+        `)
+
+    result2.data.allMarkdownRemark.edges.forEach(({ node }) => {
+        createPage({
+            path: node.fields.slug,
+            component: path.resolve(`./src/templates/wdoor-template.js`),
+            context: {
+                // Data passed to context is available
+                // in page queries as GraphQL variables.
+                slug: node.fields.slug,
+            },
+        })
+    })
+
+
 }

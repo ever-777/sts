@@ -1,5 +1,6 @@
 import React from "react"
 import {Link} from "gatsby"
+import {graphql} from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -17,10 +18,11 @@ const IndexPage = ({data}) => (
                 <div key={node.id} className={"card w-50"}>
                     <Link to={node.fields.slug} className={"card-body"}>
                         <div className={"d-flex justify-content-center"}>
-                            <Image src={"images/doors/" + node.frontmatter.picture}/>
+                            <Image src={"../images/doors/" + node.frontmatter.picture}/>
                         </div>
                         <h5>{node.frontmatter.title}</h5>
-                        <p>Цена: {node.frontmatter.price} рублей</p>
+                        <p>Цена полотна: {node.frontmatter.price_door} рублей</p>
+                        <p>Цена комплекта: {node.frontmatter.price_complect} рублей</p>
                     </Link>
                     <div className={"d-flex justify-content-center card-footer"}>
                             <ModalForDoorsButton/>
@@ -39,7 +41,7 @@ export default IndexPage
 
 export const query = graphql`
 {
-  allMarkdownRemark(sort: {fields: frontmatter___title}) {
+  allMarkdownRemark(sort: {fields: frontmatter___title}, filter: {fields: {}, frontmatter: {type: {eq: "wood"}}}) {
     totalCount
     edges {
       node {
@@ -47,6 +49,8 @@ export const query = graphql`
         frontmatter {
           title
           price
+          price_door
+          price_complect
           picture
         }
         excerpt
